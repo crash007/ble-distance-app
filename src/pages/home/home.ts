@@ -17,7 +17,7 @@ export class HomePage {
   }
 
   ionViewDidLoad() {
-    this.bleScanning();
+  
   }
 
   bleScanning() {
