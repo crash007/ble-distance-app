@@ -12,7 +12,7 @@ export class HomePage {
 
   devices: any[] = [];
   value: any;
-  constructor(public navCtrl: NavController, private ble: BLE, private scannerProvider: ScannerProvider) {
+  constructor(public navCtrl: NavController, private scannerProvider: ScannerProvider) {
 
   }
 
