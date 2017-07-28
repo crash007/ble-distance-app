@@ -19,12 +19,18 @@
     <ion-card-content>
     
       <canvas #distanceCanvas></canvas>
-      <button ion-button full (click)="bleScanning()">Scan</button>
+      <ion-note>{{connected}}</ion-note>
     </ion-card-content>
   </ion-card>
-
+  <ion-fab right bottom>
+    <button ion-fab color="light" (click)="bleScanning()"><ion-icon name="search"></ion-icon></button>
+  </ion-fab>
+   <ion-fab left bottom>
+    <button ion-fab color="light" (click)="resetChart()"><ion-icon name="close"></ion-icon></button>
+  </ion-fab>
+  
 </ion-content>
 
 <ion-footer>
-
+   
 </ion-footer>

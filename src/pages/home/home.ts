@@ -17,6 +17,7 @@ export class HomePage {
   devices: any[] = [];
   value: any;
   loader:any;
+  connected:string;
 
 
 
@@ -37,9 +38,14 @@ export class HomePage {
     this.dataChart();
   }
 
- 
+ resetChart(){
+   this.connected="";
+   this.distanceCanvas.data.datasets[0].data[0] = 0;
+   this.distanceCanvas.update();
+ }
 
   bleScanning() {
+    this.resetChart();
     this.loadingDialog();
     this.devices = [];
     //console.log("start scanning");
@@ -49,7 +55,7 @@ export class HomePage {
       if (temp.name == "PeWe") {
         
         
-        
+        this.connected="Gather distance from "+temp.name;
         this.loader.dismiss();
         console.log("Found PeWe device");
         let adData = temp.advertising;
