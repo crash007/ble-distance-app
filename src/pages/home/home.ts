@@ -34,7 +34,7 @@ export class HomePage {
   }
 
   ionViewDidLoad() {
-  
+    this.dataChart();
   }
 
  
@@ -48,7 +48,7 @@ export class HomePage {
       //console.log(temp) //Hur ser detta ut?
       if (temp.name == "PeWe") {
         
-        this.dataChart();
+        
         
         this.loader.dismiss();
         console.log("Found PeWe device");
